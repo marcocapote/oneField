@@ -24,9 +24,21 @@ function criar_submenu()
 }
 function renderizar_pagina()
 {
-    include 'views/menu.php';
+    // Caminho absoluto para o arquivo menu.php
+    $path = plugin_dir_path(__DIR__) . 'views/menu.php';
+    if (file_exists($path)) {
+        include $path;
+    } else {
+        echo '<div class="error">Arquivo de menu não encontrado.</div>';
+    }
 }
 
 function renderizar_submenu(){
-    include 'views/submenu.php';
+     // Caminho absoluto para o arquivo submenu.php
+     $path = plugin_dir_path(__DIR__) . 'views/submenu.php';
+     if (file_exists($path)) {
+         include $path;
+     } else {
+         echo '<div class="error">Arquivo de submenu não encontrado.</div>';
+     }
 }
