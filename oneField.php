@@ -8,8 +8,8 @@
 
  if (!defined('ABSPATH')) exit;
 
-require_once __DIR__ . 'models/table.php';
-require_once __DIR__ . 'models/menu.php';
+require_once __DIR__ . '/models/table.php';
+require_once __DIR__ . '/models/menu.php';
 
 register_activation_hook( __FILE__, 'create_table_oneField' );
 
