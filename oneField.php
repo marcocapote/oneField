@@ -10,6 +10,7 @@
 
 require_once __DIR__ . '/models/table.php';
 require_once __DIR__ . '/models/menu.php';
+require_once __DIR__ . '/controllers/oneFieldController.php';
 
 // Registro de tabelas
 register_activation_hook(__FILE__, 'create_table_oneField');
